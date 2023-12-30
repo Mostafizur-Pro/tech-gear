@@ -35,13 +35,17 @@ const ShoppingCart = () => {
         },
     ];
     return (
-        <section className="py-16">
+        <section className=" container mx-auto px-6 py-16">
             <h2 className="uppercase font-medium">Your Shopping Cart</h2>
-            <div className="py-10">
-                <div className="grid grid-cols-12 gap-6 font-semibold uppercase pb-3 border-[#DD748F] border-b">
-                    <div className="col-span-1"></div>
-                    <div className="col-span-3">
-                        <h4 className="">Description</h4>
+            <div className="py-10 ">
+                <div className=" md:grid hidden  grid-cols-12 gap-6 font-semibold uppercase pb-3 border-[#DD748F] border-b">
+                    <div className="col-span-4 flex xl:gap-10 lg:gap-5 gap-2">
+                        <div className="">
+                            <p className=" w-16 object-cover rounded-md"></p>
+                        </div>
+                        <div className="">
+                            <h4 className="">Description</h4>
+                        </div>
                     </div>
                     <div className="col-span-2">
                         <h4 className="">SKU</h4>
@@ -62,33 +66,45 @@ const ShoppingCart = () => {
                 <div className="">
                     {shoppingCart.map((product) => (
                         <div className="pt-6 border-b">
-                            <div className="grid grid-cols-12 gap-6 items-center pb-3">
-                                <div className="col-span-1">
-                                    <Image
-                                        className="h-16 w-16 object-cover rounded-md"
-                                        src={product.image}
-                                        alt="product image"
-                                    ></Image>
-                                </div>
-                                <div className="col-span-3">
-                                    <h4 className="uppercase text-lg">
-                                        {product.productName}
-                                    </h4>
-                                    <div className="flex gap-3 text-gray-400 italic">
-                                        <p className="">
-                                            Color: {product.color},
-                                        </p>
-                                        <p className="">Size: {product.size}</p>
+                            <div className="md:grid grid-cols-12 gap-6 items-center pb-3">
+                                <div className="col-span-4 flex xl:gap-10 lg:gap-5 md:gap-2 gap-5">
+                                    <div className="">
+                                        <Image
+                                            className="h-16 w-16 object-cover rounded-md"
+                                            src={product.image}
+                                            alt="product image"
+                                        ></Image>
+                                    </div>
+                                    <div className="">
+                                        <h4 className="uppercase text-lg">
+                                            {product.productName}
+                                        </h4>
+                                        <div className="lg:flex gap-3 text-gray-400 italic">
+                                            <p className="">
+                                                Color: {product.color},
+                                            </p>
+                                            <p className="">
+                                                Size: {product.size}
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="col-span-2">
-                                    <h4 className="uppercase">{product.SKU}</h4>
+                                    <h4 className="uppercase">
+                                        <span className="uppercase font-semibold md:hidden inline">
+                                            SKU:{" "}
+                                        </span>
+                                        {product.SKU}
+                                    </h4>
                                 </div>
                                 <div className="col-span-2">
                                     <h4 className="">{product.quantity}</h4>
                                 </div>
                                 <div className="col-span-2 text-[#DD748F]">
                                     <h4 className="uppercase">
+                                        <span className="uppercase font-semibold md:hidden inline">
+                                            Unit Price:{" "}
+                                        </span>{" "}
                                         ${product.price}
                                     </h4>
                                 </div>
@@ -96,6 +112,9 @@ const ShoppingCart = () => {
                                 <div className="col-span-2 flex justify-between items-center text-[#DD748F]">
                                     <div className="col-span-">
                                         <h4 className="uppercase">
+                                            <span className="uppercase font-semibold md:hidden inline">
+                                                Total:{" "}
+                                            </span>{" "}
                                             ${product.price}
                                         </h4>
                                     </div>
