@@ -9,7 +9,9 @@ const WishList = () => {
       {/* nav section */}
       <div className="md:col-span-1 border">
         {/* <SideBar></SideBar> */}
-        <p className="text-5xl font-extralight text-center">SideBar Under constuction.</p>
+        <p className="text-5xl font-extralight text-center">
+          SideBar Under constuction.
+        </p>
       </div>
       {/* product section container */}
       <div className="md:col-span-2 border">
