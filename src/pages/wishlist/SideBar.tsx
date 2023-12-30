@@ -30,14 +30,8 @@ const SideBar = () => {
             >
               {link.name}
               <span className="text-xl md:hidden inline">
-                <ion-icon
-                  name={`${
-                    heading === link.name ? "chevron-up" : "chevron-down"
-                  }`}
-                ></ion-icon>
               </span>
               <span className="text-xl md:mt-1 md:ml-2  md:block hidden group-hover:rotate-180 group-hover:-mt-2">
-                <ion-icon name="chevron-down"></ion-icon>
               </span>
             </h1>
             {link.submenu && (
