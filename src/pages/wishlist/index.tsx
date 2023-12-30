@@ -2,12 +2,16 @@ import Image from "next/image";
 import img1 from "../../../public/9_thumb.jpg";
 import React from "react";
 import Link from "next/link";
+import SideBar from "./SideBar";
 
 const WishList = () => {
   return (
     <section className="bg-slate-50 md:grid-cols-3 px-3 md:px-0 grid gap-5 max-w-7xl mx-auto">
       {/* nav section */}
-      <div className="md:col-span-1 border"></div>
+      <div className="md:col-span-1 border">
+        {/* <SideBar></SideBar> */}
+        <p className="text-5xl font-extralight text-center">SideBar Under constuction.</p>
+      </div>
       {/* product section container */}
       <div className="md:col-span-2 border">
         <h1 className="uppercase">Your WishList</h1>
