@@ -2,8 +2,11 @@
 https://govind-ecommerce.netlify.app/
 https://github.com/Govind783/react-e-commerce-
 
-create new branch mostafiz
-create new branch towsif
+
+Navbar: https://apollotran.com/prestashop/leo_otis_demo/en/home-1.html
+Contact Page : https://www.tattek.sk/minovate-commerce/contact.html
+
+
 
 
  -->
