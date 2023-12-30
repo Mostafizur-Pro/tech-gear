@@ -137,6 +137,7 @@ const navigation = {
   pages: [
     { name: "contact", href: "/contact" },
     { name: "Stores", href: "#" },
+    { name: "Dashboard", href: "/dashboard" },
   ],
 };
 
@@ -298,12 +299,12 @@ export default function Navbar() {
                       Sign in
                     </Link>
                   </div>
-               
+
                 </div>
 
                 <div className="border-t border-gray-200 px-4 py-6">
                   <a href="#" className="-m-2 flex items-center p-2">
-                    
+
                     <span className="sr-only">, change currency</span>
                   </a>
                 </div>
@@ -315,7 +316,7 @@ export default function Navbar() {
 
       <header className="relative bg-white">
         <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-               Asslamualikum
+          Asslamualikum
         </p>
 
         <nav
@@ -471,22 +472,22 @@ export default function Navbar() {
               </Popover.Group>
 
               <div className="ml-auto flex items-center">
-              {
-                a ? <img
-                className="h-8 w-8 rounded-full"
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                alt=""
-              /> :  <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  <Link 
-                    href="/login"
-                    className="text-sm font-medium text-gray-700 hover:text-gray-800"
-                  >
-                    Sign in
-                  </Link>
-                  <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
-                 
-                </div>
-              }
+                {
+                  a ? <img
+                    className="h-8 w-8 rounded-full"
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt=""
+                  /> : <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+                    <Link
+                      href="/login"
+                      className="text-sm font-medium text-gray-700 hover:text-gray-800"
+                    >
+                      Sign in
+                    </Link>
+                    <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
+
+                  </div>
+                }
 
                 <div className="hidden lg:ml-8 lg:flex">
                   <a
@@ -519,7 +520,7 @@ export default function Navbar() {
                           placeholder="0.00"
                         />
                         <div className="absolute inset-y-0 right-0 flex items-center">
-                        
+
                           <select
                             id="currency"
                             name="currency"
