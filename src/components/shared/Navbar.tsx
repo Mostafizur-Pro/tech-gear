@@ -9,6 +9,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
+
 const navigation = {
   categories: [
     {
@@ -146,6 +147,7 @@ function classNames(...classes: string[]) {
 export default function Navbar() {
   const a = false
   const [open, setOpen] = useState(false);
+
 
   return (
     <div className="mx-3">
