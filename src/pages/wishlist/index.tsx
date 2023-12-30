@@ -2,7 +2,6 @@ import Image from "next/image";
 import img1 from "../../../public/9_thumb.jpg";
 import React from "react";
 import Link from "next/link";
-import SideBar from "./SideBar";
 
 const WishList = () => {
   return (

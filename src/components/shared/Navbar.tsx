@@ -27,6 +27,9 @@ const Navbar: React.FC = () => {
       <li>
         <Link href="/about">About Us</Link>
       </li>
+      <li>
+        <Link href="/wishlist">Wishlist</Link>
+      </li>
     </>
   );
   return (
