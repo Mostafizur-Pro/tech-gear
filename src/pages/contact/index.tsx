@@ -6,7 +6,7 @@ import {
   AiFillGoogleCircle,
   AiFillAmazonSquare,
 } from "react-icons/ai";
-import Slider from "react-slick";
+ 
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
