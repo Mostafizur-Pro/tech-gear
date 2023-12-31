@@ -8,7 +8,6 @@ const SideBar = () => {
       <div className="">
         <div className="z-50 p-5 md:w-auto w-full flex justify-between">
           <div className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
-            <i name={`${open ? "close" : "menu"}`}></i>
           </div>
         </div>
         <ul className={` bg-white w-full  overflow-y-auto 
