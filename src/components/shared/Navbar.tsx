@@ -310,7 +310,7 @@ export default function Navbar() {
 
       <header className="relative bg-white">
         <div className="flex justify-between  h-10 items-center  bg-rose-300 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-          <div>Discoutn 20%</div>
+          <div>Discount 20%</div>
           <div>0182934357</div>
         </div>
 
