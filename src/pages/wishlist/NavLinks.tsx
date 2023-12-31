@@ -19,8 +19,11 @@ const NavLinks = () => {
             >
               {link.name}
               <span className="text-xl md: hidden ">
+
               </span>
               <span className="text-xl hidden group-hover:rotate-180 group-hover:-mt-2">
+
+
               </span>
             </h1>
             {link.submenu && (
@@ -76,6 +79,7 @@ const NavLinks = () => {
                     {slinks.Head}
 
                     <span className="text-xl  inline">
+
                     </span>
                   </h1>
                   <div
