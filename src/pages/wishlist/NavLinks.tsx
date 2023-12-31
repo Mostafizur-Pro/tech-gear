@@ -19,14 +19,11 @@ const NavLinks = () => {
             >
               {link.name}
               <span className="text-xl md: hidden ">
-                {/* <i
-                  name={`${
-                    heading === link.name ? "chevron-up" : "chevron-down"
-                  }`}
-                ></i> */}
+
               </span>
               <span className="text-xl hidden group-hover:rotate-180 group-hover:-mt-2">
-                {/* <i name="chevron-down"></i> */}
+
+
               </span>
             </h1>
             {link.submenu && (
@@ -82,13 +79,7 @@ const NavLinks = () => {
                     {slinks.Head}
 
                     <span className="text-xl  inline">
-                      {/* <i
-                        name={`${
-                          subHeading === slinks.Head
-                            ? "chevron-up"
-                            : "chevron-down"
-                        }`}
-                      ></i> */}
+
                     </span>
                   </h1>
                   <div
