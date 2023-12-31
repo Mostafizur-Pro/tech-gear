@@ -1,6 +1,6 @@
 import React from 'react';
 
-const index = () => {
+const HomePage = () => {
     return (
         <div>
             <div className="carousel w-full">
@@ -113,4 +113,4 @@ const index = () => {
     );
 };
 
-export default index;
+export default HomePage;
