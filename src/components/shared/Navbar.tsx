@@ -149,12 +149,12 @@ function classNames(...classes: string[]) {
 }
 
 export default function Navbar() {
-  const a = false
+  const a = true
   const [open, setOpen] = useState(false);
 
 
   return (
-    <div className="mx-3">
+    <div className="mx-auto">
       {/* Mobile menu */}
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative z-40 lg:hidden" onClose={setOpen}>
@@ -196,7 +196,7 @@ export default function Navbar() {
                 {/* Links */}
                 <Tab.Group as="div" className="mt-2">
                   <div className="border-b border-gray-200">
-                    <Tab.List className="-mb-px flex space-x-8 px-4">
+                    <Tab.List className="-mb-px flex space-x-4 px-4">
                       {navigation.categories.map((category) => (
                         <Tab
                           key={category.name}
@@ -318,9 +318,10 @@ export default function Navbar() {
       </Transition.Root>
 
       <header className="relative bg-white">
-        <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-          Asslamualikum
-        </p>
+        <div className="flex justify-between  h-10 items-center  bg-rose-300 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
+          <div>Discoutn 20%</div>
+          <div>0182934357</div>
+        </div>
 
         <nav
           aria-label="Top"
@@ -344,7 +345,7 @@ export default function Navbar() {
                   <span className="sr-only">Your Company</span>
                   <img
                     className="h-8 w-auto"
-                    src=" "
+                    src="https://pbs.twimg.com/media/FVs3VPLWIAATXow.jpg:large"
                     alt="Logo"
                   />
                 </a>
@@ -357,7 +358,7 @@ export default function Navbar() {
                     <Popover key={category.name} className="flex">
                       {({ open }) => (
                         <>
-                          <div className="relative flex">
+                          <div className="relative flex ">
                             <Popover.Button
                               className={classNames(
                                 open
@@ -513,27 +514,16 @@ export default function Navbar() {
                     <div>
                       <div className="relative mt-2 rounded-md shadow-sm">
                         <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                          <span className="text-gray-500 sm:text-sm">$</span>
+                           
                         </div>
                         <input
                           type="text"
                           name="price"
                           id="price"
-                          className="block outline-none w-[200px] rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-rose-500 sm:text-sm sm:leading-6"
-                          placeholder="0.00"
+                          className="block outline-none w-[149px] rounded-md border-0 py-1.5 pl-2 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-rose-500 sm:text-sm sm:leading-6"
+                          placeholder="search"
                         />
-                        <div className="absolute inset-y-0 right-0 flex items-center">
-
-                          <select
-                            id="currency"
-                            name="currency"
-                            className="h-full rounded-md border-0 bg-transparent py-0 pl-2 pr-7 text-gray-500 outline-none sm:text-sm"
-                          >
-                            <option>Bangla</option>
-                            <option>English</option>
-                            <option>Hindi</option>
-                          </select>
-                        </div>
+                      
                       </div>
                     </div>
                   </a>
