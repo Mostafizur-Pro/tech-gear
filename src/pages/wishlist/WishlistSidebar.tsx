@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import Link  from "next/link";
-import NavLinks from "./navLinks";
 
-
-
-
-const Sidebar = () => {
+const WishlistSidebar = () => {
   const [open, setOpen] = useState(true);
   return (
     <nav className="">
@@ -24,11 +20,11 @@ const Sidebar = () => {
               Home
             </Link>
           </li>
-          <NavLinks />
+          <WishlistSidebar />
         </ul>
       </div>
     </nav>
   );
 };
 
-export default Sidebar;
+export default WishlistSidebar;

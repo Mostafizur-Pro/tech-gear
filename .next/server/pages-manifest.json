@@ -2,9 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/wishlist": "pages/wishlist.js",
-  "/404": "pages/404.js",
-  "/shopping-cart": "pages/shopping-cart.js",
   "/dashboard": "pages/dashboard.js",
-  "/home": "pages/home.js"
+  "/home": "pages/home.js",
+  "/wishlist": "pages/wishlist.js"
 }

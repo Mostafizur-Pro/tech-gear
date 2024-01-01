@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import  Link  from "next/link";
 import { links } from "./links";
 
-const NavLinks = () => {
+const wishlistNavLinks = () => {
   const [heading, setHeading] = useState("");
   const [subHeading, setSubHeading] = useState("");
   return (
@@ -103,4 +103,4 @@ const NavLinks = () => {
   );
 };
 
-export default NavLinks;
+export default wishlistNavLinks;

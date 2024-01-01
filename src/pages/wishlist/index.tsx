@@ -1,9 +1,11 @@
 import Image from "next/image";
-// import img1 from "../../../public/9_thumb.jpg";
+
 import img1 from "../../assets/wishlist/9_thumb.jpg";
 import React from "react";
+import WishlistSidebar from "./WishlistSidebar";
 import Link from "next/link";
-import Sidebar from "./sidebar";
+
+
 
 
 
@@ -12,7 +14,7 @@ const WishList = () => {
     <section className="bg-slate-50 md:grid-cols-3 px-3 md:px-0 grid gap-5 max-w-7xl mx-auto">
       {/* nav section */}
       <div className="md:col-span-1 border">
-        <Sidebar/>
+        <WishlistSidebar/>
       </div>
       {/* product section container */}
       <div className="md:col-span-2 border">
