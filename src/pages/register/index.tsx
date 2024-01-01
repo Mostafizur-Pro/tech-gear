@@ -4,6 +4,7 @@ import { FaSignInAlt, FaUserAlt } from "react-icons/fa";
 import { IoEye, IoEyeOff } from "react-icons/io5";
 
 const Register = () => {
+    const [createUserLoading, setCreateUserLoading] = useState(false);
     // show password
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setConfirmShowPassword] = useState(false);
@@ -35,7 +36,36 @@ const Register = () => {
                 setConfirm_Errors(true);
             } else {
                 setConfirm_Errors(false);
-                console.log(formData);
+                setCreateUserLoading(true);
+                const userData = {
+                    name,
+                    email,
+                    password: cPassword,
+                    role: "buyer",
+                    phone: " ",
+                    image: " ",
+                    address: " ",
+                };
+
+                fetch(
+                    "https://techgear-server.vercel.app/api/v1/users/create-user",
+                    {
+                        method: "POST",
+                        headers: {
+                            "content-type": "application/json",
+                        },
+                        body: JSON.stringify(userData),
+                    }
+                )
+                    .then((res) => res.json())
+                    .then((result) => {
+                        setCreateUserLoading(false);
+                        console.log(result);
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                        setCreateUserLoading(false);
+                    });
             }
         } else {
             setAddOneCapitalWordError(
@@ -239,20 +269,28 @@ const Register = () => {
                                 type="submit"
                                 className="flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-orange-600 hover:bg-orange-700 rounded py-2 w-full transition duration-150 ease-in"
                             >
-                                <span className="mr-2 uppercase">Register</span>
-                                <span>
-                                    <svg
-                                        className="h-6 w-6"
-                                        fill="none"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                </span>
+                                {createUserLoading ? (
+                                    <span className="text-white loading loading-spinner loading-md"></span>
+                                ) : (
+                                    <div className="flex">
+                                        <span className="mr-2 uppercase">
+                                            Register
+                                        </span>
+                                        <span>
+                                            <svg
+                                                className="h-6 w-6"
+                                                fill="none"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth="2"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                            >
+                                                <path d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                )}
                             </button>
                         </div>
                     </form>
