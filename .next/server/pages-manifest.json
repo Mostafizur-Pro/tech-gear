@@ -2,9 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.js",
-  "/contact": "pages/contact.js",
-  "/": "pages/index.js",
-  "/home": "pages/home.js",
-  "/dashboard": "pages/dashboard.js"
+  "/login": "pages/login.js",
+  "/register": "pages/register.js",
+  "/shopping-cart": "pages/shopping-cart.js"
 }
