@@ -15,17 +15,33 @@ const Register = () => {
         cPassword: "",
     });
 
-    // storing errors in state
-    const [Confirm_errors, setConfirm_Errors] = useState(false);
-    const [length_errors, setLength_Errors] = useState(false);
-
     // destructuring form data
     const { name, email, password, cPassword } = formData;
+
+    // storing errors in state
+    const [Confirm_errors, setConfirm_Errors] = useState(false);
+    const [addOneCapitalWordError, setAddOneCapitalWordError] = useState("");
 
     // handling form data sending it to backend
     const handleSubmit = async (e: { preventDefault: () => void }) => {
         e.preventDefault();
-        console.log(formData);
+        if (
+            /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{6,})/.test(
+                password
+            )
+        ) {
+            setAddOneCapitalWordError("");
+            if (password !== cPassword) {
+                setConfirm_Errors(true);
+            } else {
+                setConfirm_Errors(false);
+                console.log(formData);
+            }
+        } else {
+            setAddOneCapitalWordError(
+                "Password must be at least one capital word, one lowercase, one special character, and length 6 word and one number"
+            );
+        }
     };
     return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-gray-300">
@@ -149,12 +165,9 @@ const Register = () => {
                                 >
                                     {showPassword ? <IoEyeOff /> : <IoEye />}
                                 </span>
-                                {length_errors && (
-                                    <p className="text-red-500 text-xs italic">
-                                        Please choose a password of at least 8
-                                        characters.
-                                    </p>
-                                )}
+                                <p className="text-red-500 text-xs italic">
+                                    {addOneCapitalWordError}
+                                </p>
                             </div>
                         </div>
 
